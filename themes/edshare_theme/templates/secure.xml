@@ -1,0 +1,90 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE html SYSTEM "entities.dtd" > 
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epc="http://eprints.org/ep3/control">
+  <head>
+    <title><epc:pin ref="title" textonly="yes"/> - <epc:phrase ref="archive_name"/></title>
+    <script type="text/javascript">var rel_path = "/secure";</script>
+	<epc:pin ref="login_status_header"/>
+    <script type="text/javascript" src="{$config{rel_path}}/javascript/secure_auto.js"><!-- padder --></script>
+    <style type="text/css" media="screen">@import url(<epc:print expr="$config{rel_path}"/>/style/auto.css);</style>
+    <style type="text/css" media="print">@import url(<epc:print expr="$config{rel_path}"/>/style/print.css);</style>
+    <link rel="icon" href="{$config{rel_path}}/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{$config{rel_path}}/favicon.ico" type="image/x-icon"/>
+    <link rel="Top" href="{$config{frontpage}}"/>
+    <link rel="Search" href="{$config{http_cgiurl}}/search"/>
+    <epc:pin ref="head"/>
+    <style type='text/css' media="screen">@import url(<epc:print expr="$config{rel_path}"/>/style/nojs.css);</style>
+    <script type="text/javascript" src="{$config{rel_path}}/javascript/jscss.js"><!-- padder --></script>
+	<!--[if IE 6]>
+		<style type='text/css'>@import url(/style/ie6.css);</style>
+	<![endif]-->
+  </head>
+<body>
+<div class="ed_main_container">
+        <div class="ed_topbar_contaener">
+		<div class="ed_topbar">
+			<div class="ed_logos_bar"><h1 class="ed_logo">EdShare</h1></div>
+
+         	        <div align="left" class="ed_topbar_tools">
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+				<td>
+					<ul class="ep_tm_menu">
+						<li><a href="{$config{base_url}}">Home</a></li>
+						<li><a href="{$config{base_url}}/view/">Browse</a></li>
+						<li><a href="{$config{base_url}}/information.html">About</a></li>
+						<li><a href="{$config{base_url}}/help/">Help</a></li>
+					</ul>
+				</td>
+				<td align="right">
+				      <form method="get" action="{$config{base_url}}/cgi/search/simple">
+				      <input class="ed_topbar_search_text" type="text" name="q" value="Search..." onclick="if(this.value=='Search...')this.value='';return false;" />
+				        <input value="Search" type="submit" name="_action_search" class="ed_topbar_search_button" /> 
+					<input type="hidden" name="_order" value="bytitle" />
+					<input type="hidden" name="basic_srchtype" value="ALL" />
+					<input type="hidden" name="_satisfyall" value="ALL" />
+					<input type="hidden" name="_default_action" value="search" />
+					</form><br />
+					<a class="ep_advanced_search_link" href="{$config{base_url}}/cgi/search/advanced">Advanced search</a>
+				</td>
+				</tr>
+				</table>
+                	</div>
+		</div>
+		<div class="ed_user_profile">
+			<div class="ed_status_wrapper">
+				<epc:pin ref="login_status"/>	
+				<div class="clearer"> </div>
+			</div>
+		</div>
+        </div>
+
+	<div class="ed_content_container">
+		<h1 class="ed_page_title"><epc:pin ref="title" /></h1>
+
+		<div class="ed_page_content">
+			<epc:pin ref="page"/>
+		</div>
+		<div class="clearer"> </div>
+	</div>
+
+	<div class="ed_footer_container">
+		<a href="{$config{perl_url}}/tag_cloud">Tag Cloud</a> | <a href="{$config{perl_url}}/latest">Latest Additions</a> | <a href="{$config{base_url}}/help/">Help</a> | <a href="/edshare_takedown.pdf">Take-down Policy</a> | <a href="/edshare_tnc.pdf">Terms and Conditions</a> | <a href="/content_edshare.pdf">Guide for adding content to EdShare</a><br/>
+
+		<p class="ed_footer_text">
+			For any questions or feedback, please contact <a href="mailto:{$config{adminemail}}" >us</a>.
+			<br />
+			Copyright &copy; 2008-2010 University of Southampton
+		</p>
+
+                <div style="margin-top:1em;">
+                        This repository is powered by EdShare, an extension to <a href="http://eprints.org">EPrints</a>.<br/>
+                        <span style="margin-left:1em;">EdShare was produced by the <a href="http://www.edspace.ecs.soton.ac.uk/">EdSpace</a> and <a href="http://www.oneshare.ecs.soton.ac.uk/">OneShare</a> projects and </span>
+                        <a href="http://www.jisc.ac.uk/" target="_blank"><img class="ed_footer_jisc" alt="JISC logo" src="{$config{rel_path}}/images/JISCcolour7.gif" border="0"/></a>
+                </div>
+	</div>
+</div>
+</body>
+</html>
+
